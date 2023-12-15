@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application' version '7.1.2'
+
+    id 'com.android.library' version '7.1.2'
+    id 'com.google.gms.google-services' version '4.4.0'
+}
+
+dependencies {
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    // https://firebase.google.com/docs/android/setup#available-libraries
+    classpath 'com.android.tools.build:gradle:7.1.2'
+
+}
+
+android {
+    namespace 'com.extranslate.exodus_qfirebase'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.extranslate.exodus_qfirebase"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.android.support:support-v4:34.0.0'
+    implementation 'com.android.support:localbroadcastmanager:34.0.0'
+
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.material:material:1.10.0'
+
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth:22.1.2'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.2'
+    implementation 'com.google.firebase:firebase-database:20.3.0'
+
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.11'
+    implementation 'org.osmdroid:osmdroid-wms:6.1.11'
+
+    implementation platform 'com.google.firebase:firebase-bom:32.7.0'
+
+    testImplementation('junit:junit:4.13.2')
+
+    implementation('org.eclipse.paho:org.eclipse.paho.android.service:1.1.1') {
+        exclude group: 'com.android.suppor'
+        exclude module: 'appcompat-v7'
+        exclude module: 'suppor-v4'
+    }
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#756090"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".Persona">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exodus Persona"
+                android:textColor="#353535"
+                android:textSize="36dp"
+                android:translationY="-220dp"/>
+
+            <EditText
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:id="@+id/et_nombre"
+                android:textColor="#353535"
+                android:hint="Nombre"
+                android:translationY="-125dp"/>
+
+            <EditText
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:id="@+id/et_apellido"
+                android:textColor="#353535"
+                android:hint="Apellido"
+                android:translationY="-75dp"/>
+
+            <EditText
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:id="@+id/et_edad"
+                android:textColor="#353535"
+                android:hint="Edad"
+                android:translationY="-25dp"/>
+
+            <Button
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btn_agregar"
+                android:text="Agregar Personas"
+                android:background="#655080"
+                android:translationY="75dp"/>
+            <Button
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/btn_ver"
+                android:text="Ver Personas"
+                android:background="#655080"
+                android:translationY="150dp"/>
+
+            <Button
+                android:id="@+id/GobackMainActivityBtn"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Volver al Traductor Numerico"
+                android:translationX="-40dp"
+                android:translationY="-300dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

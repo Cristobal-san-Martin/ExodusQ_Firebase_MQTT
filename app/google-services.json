@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "847654212821",
+    "project_id": "exodus-q-firebase",
+    "storage_bucket": "exodus-q-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847654212821:android:bef5d3a3329422fb7cbe5c",
+        "android_client_info": {
+          "package_name": "com.extranslate.exodus_qfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACt6Cl2Keydu5Np9UP0Zuxxx3vBy4j1Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
